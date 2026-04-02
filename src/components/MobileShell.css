@@ -1,0 +1,190 @@
+/* Mobile Shell — Light Theme */
+.mobile-outer {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f0f4ff 0%, #e8eeff 50%, #dde6ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.mobile-frame {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  background: #ffffff;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-height: 700px) and (min-width: 500px) {
+  .mobile-frame {
+    min-height: 750px;
+    max-height: 900px;
+    border-radius: 40px;
+    box-shadow: 0 40px 100px rgba(108,92,231,0.20), 0 0 0 1px rgba(108,92,231,0.10);
+    border: 1.5px solid rgba(108,92,231,0.15);
+  }
+  .mobile-outer { padding: 40px 20px; }
+}
+
+/* Status bar */
+.mobile-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px 8px;
+  background: linear-gradient(135deg, #8e44ad 0%, #6c5ce7 60%, #0984e3 100%);
+  flex-shrink: 0;
+}
+.status-time { font-size: 0.8rem; font-weight: 600; color: white; }
+.status-icons { display: flex; align-items: center; gap: 8px; }
+
+/* Top bar */
+.mobile-topbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #8e44ad 0%, #6c5ce7 60%, #0984e3 100%);
+  flex-shrink: 0;
+}
+
+.mobile-back-btn {
+  width: 36px; height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.20);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  flex-shrink: 0;
+}
+.mobile-back-btn:hover { background: rgba(255,255,255,0.30); }
+.mobile-back-btn svg { width: 16px; height: 16px; color: white; }
+
+.mobile-topbar-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mobile-step-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: white;
+  background: rgba(255,255,255,0.25);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* Progress */
+.mobile-progress-track {
+  height: 3px;
+  background: rgba(108,92,231,0.12);
+  flex-shrink: 0;
+}
+.mobile-progress-fill {
+  height: 100%;
+  background: var(--gradient-teal);
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Content */
+.mobile-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Shared Student Page Styles ---- */
+.student-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 20px 32px;
+  gap: 24px;
+  background: #ffffff;
+}
+
+.student-page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.student-page-icon {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.student-page-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.student-page-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---- Primary Button ---- */
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gradient-teal);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-teal);
+  width: 100%;
+}
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(142,68,173,0.40);
+}
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 15px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  width: 100%;
+}
+.btn-secondary:hover {
+  border-color: #6c5ce7;
+  color: var(--text-primary);
+  background: rgba(108,92,231,0.06);
+}

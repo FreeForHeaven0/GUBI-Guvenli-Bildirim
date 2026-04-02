@@ -1,0 +1,143 @@
+.appointment-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 32px;
+  gap: 18px;
+  background: var(--surface);
+}
+
+.appt-counselor-banner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+}
+.appt-counselor-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.appt-counselor-name { font-size: 0.95rem; font-weight: 700; color: var(--text-primary); }
+.appt-counselor-title { font-size: 0.78rem; color: var(--text-muted); }
+
+.appt-counter-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(61,90,254,0.06);
+  border: 1px solid rgba(61,90,254,0.2);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 0.82rem;
+  color: var(--accent-blue);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.appt-school-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: rgba(255,179,71,0.08);
+  border: 1px solid rgba(255,179,71,0.2);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-size: 0.8rem;
+  color: #a06000;
+  line-height: 1.5;
+}
+.appt-school-notice svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 1px; }
+
+.appt-section { display: flex; flex-direction: column; gap: 10px; }
+.appt-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+.day-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 4px;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.day-btn:hover:not(.disabled) {
+  border-color: var(--teal-500);
+  background: rgba(0,191,165,0.04);
+}
+.day-btn.selected {
+  border-color: var(--teal-500);
+  background: rgba(0,191,165,0.08);
+  box-shadow: 0 2px 8px rgba(0,191,165,0.2);
+}
+.day-btn.disabled { opacity: 0.4; cursor: not-allowed; }
+.day-name { font-size: 0.78rem; font-weight: 700; color: var(--text-primary); }
+.day-slots { font-size: 0.65rem; color: var(--text-muted); }
+.day-btn.selected .day-slots { color: var(--teal-600); }
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.slot-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 8px;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+.slot-btn:hover { border-color: var(--teal-500); background: rgba(0,191,165,0.04); }
+.slot-btn.selected {
+  border-color: var(--teal-500);
+  background: var(--gradient-teal);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,191,165,0.3);
+}
+.slot-duration { font-size: 0.65rem; font-weight: 400; opacity: 0.7; }
+.slot-btn.selected .slot-duration { color: rgba(255,255,255,0.8); }
+
+.appt-no-slots {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 20px;
+}
+
+.appt-error {
+  font-size: 0.82rem;
+  color: var(--accent-red);
+  background: rgba(255,107,107,0.08);
+  border: 1px solid rgba(255,107,107,0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}

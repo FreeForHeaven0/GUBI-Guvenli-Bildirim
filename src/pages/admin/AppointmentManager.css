@@ -1,0 +1,257 @@
+.appt-manager {
+  min-height: 100vh;
+  background: var(--surface);
+  padding: 24px 32px 48px;
+}
+
+.apmt-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.apmt-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.apmt-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 800px;
+}
+
+.apmt-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.apmt-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.apmt-section-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.apmt-badge {
+  background: var(--accent-red);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+}
+
+.apmt-empty {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.apmt-card {
+  background: white;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.apmt-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.apmt-student-code {
+  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.apmt-slot {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.apmt-created {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.apmt-counter-slots {
+  background: rgba(61, 90, 254, 0.05);
+  border: 1px solid rgba(61, 90, 254, 0.15);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+
+.apmt-counter-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  margin-bottom: 8px;
+}
+
+.apmt-counter-slot {
+  background: rgba(61, 90, 254, 0.08);
+  border: 1px solid rgba(61, 90, 254, 0.2);
+  color: var(--accent-blue);
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.apmt-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.apmt-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-base);
+}
+
+.apmt-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.apmt-btn--accept {
+  background: rgba(0, 191, 165, 0.1);
+  border: 1.5px solid rgba(0, 191, 165, 0.25);
+  color: var(--teal-600);
+}
+
+.apmt-btn--accept:hover:not(:disabled) {
+  background: rgba(0, 191, 165, 0.2);
+}
+
+.apmt-btn--counter {
+  background: rgba(61, 90, 254, 0.07);
+  border: 1.5px solid rgba(61, 90, 254, 0.2);
+  color: var(--accent-blue);
+}
+
+.apmt-btn--counter:hover:not(:disabled) {
+  background: rgba(61, 90, 254, 0.14);
+}
+
+.apmt-btn--decline {
+  background: rgba(255, 107, 107, 0.07);
+  border: 1.5px solid rgba(255, 107, 107, 0.2);
+  color: var(--accent-red);
+}
+
+.apmt-btn--decline:hover:not(:disabled) {
+  background: rgba(255, 107, 107, 0.14);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  padding: 20px;
+}
+
+.modal-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.modal-sub {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.counter-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.counter-slot-btn {
+  padding: 10px 6px;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.counter-slot-btn:hover {
+  border-color: var(--teal-500);
+  background: rgba(0, 191, 165, 0.04);
+}
+
+.counter-slot-btn.selected {
+  border-color: var(--teal-500);
+  background: var(--gradient-teal);
+  color: white;
+}
+
+.counter-selected-label {
+  font-size: 0.82rem;
+  color: var(--teal-600);
+  font-weight: 500;
+  margin-bottom: 20px;
+  min-height: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

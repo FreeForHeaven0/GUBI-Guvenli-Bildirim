@@ -1,0 +1,100 @@
+.counselor-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 32px;
+  gap: 16px;
+  background: var(--surface);
+}
+
+.counselor-intro {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.counselor-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+.loading-spinner {
+  width: 28px; height: 28px;
+  border: 2px solid var(--border);
+  border-top-color: var(--teal-500);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.counselor-list { display: flex; flex-direction: column; gap: 12px; }
+
+.counselor-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: left;
+}
+.counselor-card:hover {
+  border-color: var(--c-color);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transform: translateX(4px);
+}
+.counselor-card.selected {
+  border-color: var(--c-color);
+  background: color-mix(in srgb, var(--c-color) 5%, white);
+  transform: scale(0.98);
+}
+
+.c-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.c-info { flex: 1; }
+.c-name { font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 3px; }
+.c-title { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 8px; }
+.c-slots {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--teal-600);
+  font-weight: 500;
+}
+.c-slots svg { width: 13px; height: 13px; }
+
+.c-arrow { color: var(--border); flex-shrink: 0; }
+.c-arrow svg { width: 18px; height: 18px; }
+.counselor-card:hover .c-arrow { color: var(--c-color); }
+
+.counselor-anon-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 12px 14px;
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-light);
+  line-height: 1.5;
+  margin-top: auto;
+}

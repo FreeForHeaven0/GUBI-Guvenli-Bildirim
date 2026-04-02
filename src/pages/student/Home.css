@@ -1,0 +1,203 @@
+/* Student Home Screen — Light Theme */
+.home-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f0f4ff 0%, #e8eeff 40%, #ffffff 100%);
+  padding: 32px 24px 36px;
+  gap: 24px;
+  min-height: 100%;
+}
+
+/* Logo area */
+.home-logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 12px;
+}
+
+.home-echo-wave {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.echo-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(108,92,231,0.30);
+  animation: pulse-ring 3s ease-out infinite;
+}
+.echo-ring-1 { width: 80px;  height: 80px;  animation-delay: 0s; }
+.echo-ring-2 { width: 110px; height: 110px; animation-delay: 0.8s; }
+.echo-ring-3 { width: 140px; height: 140px; animation-delay: 1.6s; }
+
+.echo-logo-svg {
+  width: 72px;
+  height: 72px;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(0 8px 20px rgba(142,68,173,0.35));
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #8e44ad 0%, #6c5ce7 60%, #0984e3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.12em;
+}
+
+.home-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.home-school-badge {
+  background: rgba(108,92,231,0.10);
+  color: #6c5ce7;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid rgba(108,92,231,0.20);
+}
+
+/* Card */
+.home-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 24px 20px;
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  border: 1px solid rgba(108,92,231,0.10);
+}
+
+.home-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.10));
+}
+
+.home-card-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.home-card-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.home-anon-badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.anon-badge {
+  background: linear-gradient(135deg, rgba(108,92,231,0.10), rgba(9,132,227,0.10));
+  color: #6c5ce7;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid rgba(108,92,231,0.20);
+}
+
+/* CTA */
+.home-cta-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.home-bildir-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, #8e44ad 0%, #6c5ce7 60%, #0984e3 100%);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 20px 60px;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(142,68,173,0.35);
+  transition: all var(--transition-base);
+  width: 100%;
+  justify-content: center;
+}
+.home-bildir-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(142,68,173,0.50);
+}
+.home-bildir-btn svg { width: 24px; height: 24px; }
+
+.home-bildir-ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-full);
+  background: rgba(255,255,255,0.20);
+  animation: ripple 2s ease-out infinite;
+  pointer-events: none;
+}
+
+.home-anon-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Secondary — appointment status check */
+.home-status-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #6c5ce7;
+  border: 1.5px solid rgba(108, 92, 231, 0.30);
+  border-radius: var(--radius-full);
+  padding: 11px 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  cursor: pointer;
+  transition: all 200ms ease;
+  margin-top: 4px;
+}
+
+.home-status-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.home-status-btn:hover {
+  background: rgba(108, 92, 231, 0.08);
+  border-color: #6c5ce7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(108, 92, 231, 0.18);
+}
