@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3001'
+const BASE = import.meta.env.VITE_API_URL || 'https://gubi-guvenli-bildirim.onrender.com'
 
 // --- Reports ---
 export const createReport = (data) =>

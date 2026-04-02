@@ -5,6 +5,7 @@
   "type": "module",
   "homepage": "https://freeforheaven0.github.io/GUBI-Guvenli-Bildirim",
   "scripts": {
+    "start": "json-server --watch db.json --port $PORT --host 0.0.0.0",
     "dev": "concurrently \"json-server --watch db.json --port 3001\" \"vite\"",
     "dev:api": "json-server --watch db.json --port 3001",
     "dev:vite": "vite",
