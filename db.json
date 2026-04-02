@@ -197,21 +197,21 @@
     {
       "id": "t1",
       "username": "ayse.kaya",
-      "password": "demo123",
+      "password": "Echo@2847",
       "counselorId": "c1",
       "name": "Ayşe Kaya"
     },
     {
       "id": "t2",
       "username": "mehmet.demir",
-      "password": "demo123",
+      "password": "Echo@5193",
       "counselorId": "c2",
       "name": "Mehmet Demir"
     },
     {
       "id": "t3",
       "username": "zeynep.arslan",
-      "password": "demo123",
+      "password": "Echo@7364",
       "counselorId": "c3",
       "name": "Zeynep Arslan"
     }
