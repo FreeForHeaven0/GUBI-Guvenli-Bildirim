@@ -151,7 +151,48 @@
       "createdAt": "2026-03-26T14:30:00Z"
     }
   ],
-  "students": [],
+  "students": [
+    {
+      "id": "s1",
+      "tc": "10293847561",
+      "school": "Atatürk Anadolu Lisesi",
+      "city": "İstanbul",
+      "grade": "10-A",
+      "schoolCode": "OKL001"
+    },
+    {
+      "id": "s2",
+      "tc": "40586970314",
+      "school": "Kadıköy Anadolu Lisesi",
+      "city": "İstanbul",
+      "grade": "12-A",
+      "schoolCode": "OKL002"
+    },
+    {
+      "id": "s3",
+      "tc": "70819203647",
+      "school": "Galatasaray Lisesi",
+      "city": "İstanbul",
+      "grade": "9-A",
+      "schoolCode": "OKL003"
+    },
+    {
+      "id": "s4",
+      "tc": "91031425869",
+      "school": "Beşiktaş Atatürk A.L.",
+      "city": "İstanbul",
+      "grade": "11-C",
+      "schoolCode": "OKL004"
+    },
+    {
+      "id": "s5",
+      "tc": "23253647081",
+      "school": "İstanbul Erkek Lisesi",
+      "city": "İstanbul",
+      "grade": "9-B",
+      "schoolCode": "OKL005"
+    }
+  ],
   "teachers": [
     {
       "id": "t1",

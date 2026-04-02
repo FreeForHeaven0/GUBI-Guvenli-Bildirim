@@ -12,7 +12,7 @@ export default function StudentHome() {
         {/* Logo area */}
         <div className="home-logo-area">
           <img
-            src="/gubi-mascot.png"
+            src={`${import.meta.env.BASE_URL}gubi-mascot.png`}
             alt="GÜBİ"
             style={{
               width: 90, height: 90, objectFit: 'contain',

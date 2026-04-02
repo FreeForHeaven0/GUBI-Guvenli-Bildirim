@@ -20,7 +20,7 @@ export default function ThankYou() {
       }}>
         {/* Mascot */}
         <img
-          src="/gubi-mascot.png"
+          src={`${import.meta.env.BASE_URL}gubi-mascot.png`}
           alt="GÜBİ maskot"
           style={{
             width: 130, height: 130, objectFit:'contain',

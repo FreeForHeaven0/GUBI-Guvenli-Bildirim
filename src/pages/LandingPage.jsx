@@ -9,7 +9,7 @@ export default function LandingPage() {
       {/* Header */}
       <header className="landing-header">
         <div className="landing-logo">
-          <img src="/gubi-mascot.png" alt="GÜBİ" style={{ width:40, height:40, objectFit:'contain' }} />
+          <img src={`${import.meta.env.BASE_URL}gubi-mascot.png`} alt="GÜBİ" style={{ width:40, height:40, objectFit:'contain' }} />
           <span className="logo-text">GÜBİ</span>
           <span className="logo-sub">Güvenli Bildir</span>
         </div>

@@ -62,7 +62,7 @@ export default function AdminDashboard() {
       {/* Sidebar */}
       <aside className="admin-sidebar">
         <div className="sidebar-brand">
-          <img src="/gubi-mascot.png" alt="GÜBİ" style={{ width:40, height:40, objectFit:'contain' }} />
+          <img src={`${import.meta.env.BASE_URL}gubi-mascot.png`} alt="GÜBİ" style={{ width:40, height:40, objectFit:'contain' }} />
           <div>
             <h2 className="sidebar-brand-name">GÜBİ</h2>
             <p className="sidebar-brand-sub">Yönetim Paneli</p>

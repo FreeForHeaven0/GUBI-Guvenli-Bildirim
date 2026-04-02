@@ -92,7 +92,7 @@ export default function StudentLogin() {
         {/* ── Left: info + demo accounts ── */}
         <div className="sl-left">
           <div className="sl-brand">
-            <img src="/gubi-mascot.png" alt="GÜBİ" style={{ width: 64, height: 64, objectFit: 'contain' }} />
+            <img src={`${import.meta.env.BASE_URL}gubi-mascot.png`} alt="GÜBİ" style={{ width: 64, height: 64, objectFit: 'contain' }} />
             <div>
               <h1 className="sl-brand-title">GÜBİ</h1>
               <p className="sl-brand-sub">Güvenli Bildir</p>

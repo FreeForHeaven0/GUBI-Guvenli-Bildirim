@@ -66,7 +66,7 @@ export default function PostReport() {
         {/* ── GÜBİ Celebrating Bear ── */}
         <div className={`gubi-celebrate-wrapper ${shown ? 'shown' : ''}`}>
           <img
-            src="/gubi-celebrate.png"
+            src={`${import.meta.env.BASE_URL}gubi-celebrate.png`}
             alt="GÜBİ kutluyor!"
             className="gubi-celebrate-img"
           />

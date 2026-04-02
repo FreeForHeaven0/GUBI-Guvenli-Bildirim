@@ -61,7 +61,7 @@ export default function TeacherLogin() {
         {/* Left panel */}
         <div className="login-left">
           <div className="login-brand">
-            <img src="/gubi-mascot.png" alt="GÜBİ" style={{ width:64, height:64, objectFit:'contain' }} />
+            <img src={`${import.meta.env.BASE_URL}gubi-mascot.png`} alt="GÜBİ" style={{ width:64, height:64, objectFit:'contain' }} />
             <h1 className="login-brand-title">GÜBİ</h1>
             <p className="login-brand-sub">Öğretmen & Danışman Paneli</p>
           </div>
