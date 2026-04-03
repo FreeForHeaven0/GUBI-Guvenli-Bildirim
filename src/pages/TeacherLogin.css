@@ -292,8 +292,26 @@
 }
 
 @media (max-width: 768px) {
-  .login-container { grid-template-columns: 1fr; }
+  /* Make page a scrollable column on mobile */
+  .login-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 80px; /* room for fixed back button */
+    padding-bottom: 40px;
+  }
+  .login-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 520px;
+  }
   .login-left { display: none; }
   .login-form-card { padding: 32px 24px; }
+  .demo-section--standalone {
+    max-width: 520px;
+    width: 100%;
+  }
 }
 

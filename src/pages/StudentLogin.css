@@ -331,10 +331,27 @@
 
 /* Responsive */
 @media (max-width: 860px) {
-  .sl-container { grid-template-columns: 1fr; }
+  /* Make page a scrollable column on mobile */
+  .student-login-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-top: 80px; /* room for fixed back button */
+    padding-bottom: 40px;
+  }
+  .sl-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 520px;
+  }
   .sl-left { display: none; }
+  .sl-standalone-demo {
+    max-width: 520px;
+    width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .sl-card { padding: 28px 20px; }
 }
-
