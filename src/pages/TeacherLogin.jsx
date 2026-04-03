@@ -16,23 +16,34 @@ export default function TeacherLogin() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [loading, setLoading] = useState(false)
+  const [wakingUp, setWakingUp] = useState(false)
   const [error, setError] = useState('')
   const [showPass, setShowPass] = useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
+    setWakingUp(false)
     if (!username.trim() || !password.trim()) {
       setError('Lütfen kullanıcı adı ve şifrenizi girin.')
       return
     }
     setLoading(true)
+    // Show wake-up message after 2s if still waiting (Render cold start)
+    const wakeTimer = setTimeout(() => setWakingUp(true), 2000)
     try {
       await login(username.trim(), password.trim())
       navigate('/panel')
     } catch (err) {
-      setError(err.message || 'Giriş başarısız. Lütfen bilgilerinizi kontrol edin.')
+      const msg = err.message || ''
+      if (msg.toLowerCase().includes('failed to fetch') || msg.toLowerCase().includes('network')) {
+        setError('Sunucuya ulaşılamadı. Lütfen tekrar deneyin.')
+      } else {
+        setError(msg || 'Giriş başarısız. Lütfen bilgilerinizi kontrol edin.')
+      }
     } finally {
+      clearTimeout(wakeTimer)
+      setWakingUp(false)
       setLoading(false)
     }
   }
@@ -130,7 +141,14 @@ export default function TeacherLogin() {
 
               <button type="submit" id="login-submit-btn" className="login-submit" disabled={loading}>
                 {loading ? (
-                  <span className="login-spinner" />
+                  <div style={{ display:'flex', flexDirection:'column', alignItems:'center', gap:6 }}>
+                    <span className="login-spinner" />
+                    {wakingUp && (
+                      <span style={{ fontSize:'0.72rem', opacity:0.85, letterSpacing:'0.02em' }}>
+                        ✨ Sunucu uyanıyor, lütfen bekleyin...
+                      </span>
+                    )}
+                  </div>
                 ) : (
                   <>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

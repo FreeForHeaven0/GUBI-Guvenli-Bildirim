@@ -1,8 +1,16 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './LandingPage.css'
 
+const API = import.meta.env.VITE_API_URL || 'https://gubi-guvenli-bildirim.onrender.com'
+
 export default function LandingPage() {
   const navigate = useNavigate()
+
+  // Keep-alive: silently ping Render on landing so server is warm before login
+  useEffect(() => {
+    fetch(`${API}/counselors`).catch(() => {}) // fire-and-forget, ignore errors
+  }, [])
 
   return (
     <div className="landing">
