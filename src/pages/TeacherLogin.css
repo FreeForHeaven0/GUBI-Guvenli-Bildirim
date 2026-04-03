@@ -279,7 +279,24 @@
 }
 
 @media (max-width: 768px) {
-  .login-container { grid-template-columns: 1fr; }
-  .login-left { display: none; }
+  .login-container {
+    grid-template-columns: 1fr;
+    /* Show form first, then demo section */
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  /* Show the left panel on mobile but hide branding/desc */
+  .login-left { display: block; }
+  .login-brand,
+  .login-brand-desc { display: none; }
+  .demo-section {
+    background: rgba(255,255,255,0.70);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(108,92,231,0.12);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 16px;
+  }
   .login-form-card { padding: 32px 24px; }
 }

@@ -318,10 +318,30 @@
 
 /* Responsive */
 @media (max-width: 860px) {
-  .sl-container { grid-template-columns: 1fr; }
-  .sl-left { display: none; }
+  .sl-container {
+    grid-template-columns: 1fr;
+    /* Show the right (form) card first, demo list below */
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  /* Keep the left panel in DOM but hide branding/desc/badges */
+  .sl-left { display: block; }
+  .sl-brand,
+  .sl-brand-desc,
+  .sl-privacy-badges,
+  .sl-privacy-note { display: none; }
+
+  /* Style the demo section nicely on mobile */
+  .sl-left {
+    background: rgba(255,255,255,0.70);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(108,92,231,0.12);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    margin-top: 16px;
+  }
 }
 @media (max-width: 480px) {
   .sl-card { padding: 28px 20px; }
-  .sl-left { display: none; }
 }
