@@ -70,22 +70,6 @@ export default function TeacherLogin() {
             yönetebilir, öğrencilerle randevu planlayabilirsiniz.
           </p>
 
-          {/* Demo accounts */}
-          <div className="demo-section">
-            <p className="demo-label">🎯 Demo Hesaplar — Hızlı Giriş:</p>
-            <div className="demo-accounts">
-              {DEMO_ACCOUNTS.map((acc, i) => (
-                <button key={i} className="demo-account-btn" onClick={() => fillDemo(acc)}>
-                  <span className="demo-avatar">{acc.name.split(' ').map(n => n[0]).join('')}</span>
-                  <div>
-                    <div className="demo-name">{acc.name}</div>
-                    <div className="demo-user">@{acc.username}</div>
-                  </div>
-                  <span className="demo-arrow">→</span>
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
 
         {/* Right panel – form */}
@@ -93,7 +77,7 @@ export default function TeacherLogin() {
           <div className="login-form-card">
             <div className="login-form-header">
               <h2>Öğretmen Girişi</h2>
-              <p>Atatürk Anadolu Lisesi GÜBİ Sistemi</p>
+              <p>Anadolu Üniversitesi GÜBİ Sistemi</p>
             </div>
 
             <form onSubmit={handleSubmit} className="login-form" id="login-form">
@@ -162,6 +146,23 @@ export default function TeacherLogin() {
               🔐 Bu sayfa yalnızca yetkili okul personeli içindir
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Demo accounts — always visible below the card */}
+      <div className="demo-section demo-section--standalone">
+        <p className="demo-label">🎯 Demo Hesaplar — Hızlı Giriş:</p>
+        <div className="demo-accounts">
+          {DEMO_ACCOUNTS.map((acc, i) => (
+            <button key={i} className="demo-account-btn" onClick={() => fillDemo(acc)}>
+              <span className="demo-avatar">{acc.name.split(' ').map(n => n[0]).join('')}</span>
+              <div>
+                <div className="demo-name">{acc.name}</div>
+                <div className="demo-user">@{acc.username}</div>
+              </div>
+              <span className="demo-arrow">→</span>
+            </button>
+          ))}
         </div>
       </div>
     </div>

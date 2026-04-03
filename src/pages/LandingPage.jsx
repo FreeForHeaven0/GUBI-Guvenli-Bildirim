@@ -34,7 +34,7 @@ export default function LandingPage() {
         <div className="hero-content animate-fade-in">
           <div className="hero-badge animate-fade-in delay-100">
             <span className="badge-dot" />
-            Atatürk Anadolu Lisesi — Güvenli Alan
+            Güvenli Alan
           </div>
 
           <h1 className="hero-title animate-fade-in delay-200">
@@ -129,13 +129,13 @@ export default function LandingPage() {
       {/* Footer */}
       <footer className="landing-footer">
         <div className="footer-logo">
-          <img src="/gubi-mascot.png" alt="GÜBİ" style={{ width:28, height:28, objectFit:'contain' }} />
+          <img src={`${import.meta.env.BASE_URL}gubi-mascot.png`} alt="GÜBİ" style={{ width:28, height:28, objectFit:'contain' }} />
           <span>GÜBİ — Güvenli Bildir Anti-Zorbalık Platformu</span>
         </div>
         <p className="footer-note">
           Bu platform öğrencilerin güvenliği için tasarlanmıştır. Tüm veriler anonim olarak işlenir.
         </p>
-        <p className="footer-copy">© 2024 GÜBİ Projesi — Atatürk Anadolu Lisesi</p>
+        <p className="footer-copy">© 2024 GÜBİ Projesi — Anadolu Üniversitesi</p>
       </footer>
     </div>
   )

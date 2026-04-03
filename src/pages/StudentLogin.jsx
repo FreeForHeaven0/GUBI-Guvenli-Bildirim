@@ -110,24 +110,6 @@ export default function StudentLogin() {
             <span className="sl-badge">🛡️ Spam Önleme</span>
           </div>
 
-          <p className="sl-demo-label">🎯 Demo TC Numaraları — Hızlı Giriş:</p>
-          <div className="sl-demo-list">
-            {DEMO_STUDENTS.map((d, i) => (
-              <button key={i} className="sl-demo-btn" onClick={() => fillDemo(d)}>
-                <span className="sl-demo-avatar">
-                  {String(i + 1).padStart(2,'0')}
-                </span>
-                <div className="sl-demo-info">
-                  <span className="sl-demo-name">{d.school}</span>
-                  <span className="sl-demo-detail">Sınıf: {d.grade}</span>
-                </div>
-                {/* Masked TC — only partial digits shown */}
-                <span className="sl-demo-tc">{maskTc(d.tc)}</span>
-                <span className="sl-demo-arrow">→</span>
-              </button>
-            ))}
-          </div>
-
           <p className="sl-privacy-note">
             🔐 Demo numaraları sadece test içindir. Gerçek TC kimlik bilgileri sisteme kaydedilmez.
           </p>
@@ -242,6 +224,26 @@ export default function StudentLogin() {
               </div>
             )}
           </div>
+        </div>
+      </div>
+
+      {/* Demo TC list — always visible below the card */}
+      <div className="sl-standalone-demo">
+        <p className="sl-demo-label">🎯 Demo TC Numaraları — Hızlı Giriş:</p>
+        <div className="sl-demo-list">
+          {DEMO_STUDENTS.map((d, i) => (
+            <button key={i} className="sl-demo-btn" onClick={() => fillDemo(d)}>
+              <span className="sl-demo-avatar">
+                {String(i + 1).padStart(2,'0')}
+              </span>
+              <div className="sl-demo-info">
+                <span className="sl-demo-name">{d.school}</span>
+                <span className="sl-demo-detail">Sınıf: {d.grade}</span>
+              </div>
+              <span className="sl-demo-tc">{maskTc(d.tc)}</span>
+              <span className="sl-demo-arrow">→</span>
+            </button>
+          ))}
         </div>
       </div>
     </div>
